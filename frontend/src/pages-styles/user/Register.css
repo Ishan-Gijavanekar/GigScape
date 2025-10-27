@@ -1,0 +1,140 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #c3ec52, #0ba29d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.register-container:hover {
+  transform: translateY(-5px);
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+  color: #333;
+}
+
+.input-group input,
+.register-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s;
+  font-size: 1rem;
+  background: #f8f8f8;
+  color: #333;
+  margin-top: 0.35rem;
+}
+
+.input-group input:focus,
+.register-select:focus {
+  border-color: #0ba29d;
+  box-shadow: 0 0 0 2px rgba(11, 162, 157, 0.15);
+}
+
+.register-select {
+  appearance: none;
+  background: #f8f8f8 url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L0.803847 0.499999L11.1962 0.5L6 8Z' fill='%230ba29d'/%3E%3C/svg%3E") no-repeat right 1rem center/16px 12px;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.password-toggle:hover {
+  color: #0ba29d;
+}
+
+.register-btn {
+  width: 100%;
+  background: #0ba29d;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #09827d;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.login-text a {
+  color: #0ba29d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .register-title {
+    font-size: 1.6rem;
+  }
+
+  .register-btn {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+}
