@@ -22,6 +22,12 @@ import chatRoomRoutes from "./routes/chatRoom.js";
 import contractRoutes from "./routes/contract.js";
 import jobRoutes from "./routes/job.js";
 import messageRoutes from "./routes/message.js";
+import milestoneRoutes from "./routes/milestone.js";
+import praposalRoutes from "./routes/praposal.js";
+import quizRoutes from "./routes/quiz.js";
+import quizAttemptRoutes from "./routes/quizAttempt.js";
+import reviewRoutes from "./routes/review.js";
+import transactionRoutes from "./routes/transaction.js";
 
 // User Routes
 app.use("/api/v1/users", userRoutes)
@@ -30,6 +36,12 @@ app.use("/api/v1/chatRooms", chatRoomRoutes)
 app.use("/api/v1/contracts", contractRoutes)
 app.use("/api/v1/jobs", jobRoutes)
 app.use("/api/v1/messages", messageRoutes)
+app.use("/api/v1/milestones", milestoneRoutes)
+app.use("/api/v1/praposals", praposalRoutes)
+app.use("/api/v1/quizes", quizRoutes)
+app.use("/api/v1/quizAttempts", quizAttemptRoutes)
+app.use("/api/v1/reviews", reviewRoutes)
+app.use("/api/v1/transactions", transactionRoutes)
 
 
 
