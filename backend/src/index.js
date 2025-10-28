@@ -1,9 +1,9 @@
-import dotenv from dotenv;
+import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import CookieParser from 'cookie-parser';
-import { connectDb } from './utils/database';
+import { connectDb } from './utils/database.js';
 import {app, server} from "./utils/srever.js"
 
 

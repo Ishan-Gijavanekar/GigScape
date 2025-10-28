@@ -1,5 +1,5 @@
 import express from 'express';
-import { createJob, uploadAttachments, updateJob, deleteJob, updateJobStatus, getAllMyJobs, getJobById, getJobs, getJobByIdFreelancer, getAllJobs, featuredaJob, adminDeleteJob } from "../controllers/job.js";
+import { createJob, uploadAttachments, updateJob, deleteJob, updateJobStatus, getAllMyJobs, getJobById, getJobs, getJobByIdFreelancer, getAllJobs, featuredaJob, adminDeleteJob } from "../controllers/jobs.js";
 import { secure } from '../middlewares/auth.js';
 
 

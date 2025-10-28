@@ -34,5 +34,5 @@ const praposalSchema = new mongoose.Schema({
     timestamps: true,
 });
 
-const Praposal = mongoose.Schema("Praposal", praposalSchema);
+const Praposal = mongoose.model("Praposal", praposalSchema);
 export default Praposal;
