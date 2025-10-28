@@ -28,6 +28,7 @@ import quizRoutes from "./routes/quiz.js";
 import quizAttemptRoutes from "./routes/quizAttempt.js";
 import reviewRoutes from "./routes/review.js";
 import transactionRoutes from "./routes/transaction.js";
+import walletRoutes from "./routes/wallet.js";
 
 // User Routes
 app.use("/api/v1/users", userRoutes)
@@ -42,6 +43,7 @@ app.use("/api/v1/quizes", quizRoutes)
 app.use("/api/v1/quizAttempts", quizAttemptRoutes)
 app.use("/api/v1/reviews", reviewRoutes)
 app.use("/api/v1/transactions", transactionRoutes)
+app.use("/api/v1/wallets", walletRoutes)
 
 
 
