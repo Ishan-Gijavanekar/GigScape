@@ -47,9 +47,33 @@ const registerUser = async (req, res) => {
         const verifyUrl = `https://localhost:5000/verify/${verificationToken}`;
         await sendEmail({
             to: email,
-            subject: "Verify your email",
-            html: `<p>Click <a herf=${verifyUrl}here</a> to verify your email</P>`,
-            text: "This is to verify your email",
+            subject: "Verify Your Email Address",
+            html: `
+            <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
+            <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 30px;">
+                <h2 style="color: #333333;">Welcome to GigScape 🎉</h2>
+                <p style="font-size: 16px; color: #555555;">
+                Thanks for signing up! To get started, please verify your email address by clicking the button below:
+                </p>
+                <div style="text-align: center; margin: 30px 0;">
+                <a href="${verifyUrl}" style="background-color: #007bff; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 5px; font-weight: bold; display: inline-block;">
+                  Verify Email
+                </a>
+             </div>
+             <p style="font-size: 14px; color: #888888;">
+               If the button doesn't work, you can also copy and paste this link into your browser:
+             </p>
+             <p style="font-size: 14px; color: #007bff; word-break: break-all;">
+               ${verifyUrl}
+             </p>
+                <hr style="border: none; border-top: 1px solid #eeeeee; margin: 40px 0;">
+                <p style="font-size: 12px; color: #aaaaaa; text-align: center;">
+                  If you didn’t sign up for GigScape, you can safely ignore this email.
+                 </p>
+            </div>
+            </div>
+        `,
+        text: `Thanks for signing up! Please verify your email by visiting: ${verifyUrl}`,
         });
 
         return res.status(200).json({

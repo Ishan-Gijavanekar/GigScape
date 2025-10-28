@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 const sendEmail = async ({to, subject, html, text}) => {
     try {
         const transporter = nodemailer.createTransport({
-            host: process.envSMTP_HOST,
+            host: process.env.SMTP_HOST,
             port: process.env.SMTP_PORT,
             secure: false,
             auth: {
@@ -15,7 +15,7 @@ const sendEmail = async ({to, subject, html, text}) => {
         const info = await transporter.sendMail({
             from: process.env.GigScape || `"GigScape" <no-reply@gigscape.com>`,
             to,
-            text: text || html.replace(/<[^>]+>/g, ""),
+            text,
             html
         });
         console.log(`Email sent: ${info.messageId}`);
