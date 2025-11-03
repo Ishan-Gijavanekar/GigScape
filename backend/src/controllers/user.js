@@ -112,7 +112,7 @@ const loginUser = async (req, res) => {
             return res.status(401).json({message: 'All fields are required'});
         }
 
-        const user = await User.findOne({email}).select;
+        const user = await User.findOne({email});
         if (!user) {
             return res.status(200).json({message: "Invalid credentials"});
         }

@@ -43,7 +43,6 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        select: false,
     },
     role: {
         type: String,
@@ -111,7 +110,6 @@ const UserSchema = new mongoose.Schema({
     },
     emailToken: {
         type: String,
-        required: true,
     }
 },{
     timestamps: true,
